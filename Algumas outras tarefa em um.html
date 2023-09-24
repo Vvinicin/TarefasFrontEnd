@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula de JavaScript</title>
+</head>
+<body>
+    <button onclick="Alerta()">Alerta</button>
+    <button onclick="Maior()">Qual é Maior?</button>
+    <button onclick="Idade()">Maior de Idade</button>
+    <button onclick="Media()">Media</button>
+    <button onclick="Inteiro()">Par ou Impar</button>
+    <button onclick="Salario()">Salario</button>
+    <button onclick="Nota()">Nota Escolar</button>
+    <button onclick="Contagem">Contagem</button>
+    
+    <script>
+        function Alerta(){
+        window.alert("Olá mundo!")
+        }
+    </script>
+
+    <Script>
+        function Maior(){
+            var n1 = parseInt(window.prompt("Insira um número"))
+            var n2 = parseInt(window.prompt("Insira um número"))
+            var n3 = parseInt(window.prompt("Insira um número"))
+
+            if(n1 > n2 && n1 > n3){
+                window.alert(n1)
+            }
+            else if(n2 > n1 && n2 > n3){
+                window.alert(n2)
+            }
+            else if(n3 > n1 && n3 > n2){
+                window.alert(n3)
+            }
+        }
+    </Script>
+
+    <Script>
+        function Media(){
+            var x = parseInt(window.prompt("Insira um número"))
+            var y = parseInt(window.prompt("Insira um número"))
+            var z = parseInt(window.prompt("Insira um número"))
+            var total = (x + y + z)/ 3
+            window.alert(total.toFixed(2))
+        }
+    </Script>
+
+    <Script>
+        function Idade(){
+            var n1 = parseInt(window.prompt("Sua Idade"))
+
+            if(n1 >= 18){
+                window.alert("Ooohh... Você é maior de idade!")
+            }
+            else{
+                window.alert("É, você não é maior de idade...")
+            }
+        }
+    </Script>
+
+    <Script>
+        function Inteiro(){
+            var n = parseInt(window.prompt("Fale um numero"))
+
+            if(n %2 == 0){
+                window.alert("Eita que o numero é par!")
+            }
+            else{
+                window.alert("Opa, o numero é impar!")
+            }
+        }
+    </Script>
+
+    <Script>
+        function Salario(){
+            var s = parseInt(window.prompt("Informe seu salário."))
+
+            if(s <= 280){
+                let s2 = s * 0.20
+                let s3 = s2 + s
+                window.alert(s)
+                window.alert("20%")
+                window.alert(s2)
+                window.alert(s3)
+            }
+            if(s >= 280 && s <= 700){
+                const s2 = s * 0.15
+                const s3 = s2 + s 
+                window.alert(s)
+                window.alert("15%")
+                window.alert(s2)
+                window.alert(s3)
+            }
+            if(s >= 700 && s <= 1500){
+                const s2 = s * 0.10
+                const s3 = s2 + s 
+                window.alert(s)
+                window.alert("10%")
+                window.alert(s2)
+                window.alert(s3)
+            }
+            if(s >= 1500){
+                const s2 = s * 0.05
+                const s3 = s2 + s 
+                window.alert(s)
+                window.alert("5%")
+                window.alert(s2)
+                window.alert(s3)
+            }
+        }
+    </Script>
+
+    <Script>
+        function Nota(){
+            let nota1 = parseInt(window.prompt("Primeiro bimestre"))
+            let nota2 = parseInt(window.prompt("Segundo bimestre"))
+            let nota3 = parseInt(window.prompt("Terceiro bimestre"))
+            let nota4 = parseInt(window.prompt("Quarto bimestre"))
+            let x = (nota1 + nota2 + nota3 + nota4)/ 4
+
+            if(x > 9){
+                window.alert("Parabéns, EXCELENTE!")
+            }
+            if(x >= 7){
+                window.alert("Parabéns!")
+            }
+            if(x >= 5 && x < 7){
+                window.alert("Ops!Você está de recuperação")
+            }
+            if(x < 5){
+                window.alert("Infelizmente você não passou...")
+            }
+        }
+    </Script>
+
+    <Script>
+        function Contagem(){ //Não está funcionando essa parte toda
+            var x = 0;
+            while(x < 50)
+            {
+            window.alert(x)
+            x++
+            }
+        }
+    </Script>
+</body>
+</html>

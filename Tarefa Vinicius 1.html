@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefa</title>
+</head>
+<body>
+    <h1>Tarefazinha</h1>
+    <button id="botao" onclick="Sakura()">Clique aqui!</button>
+    <div id="resultado"></div>
+
+    <script>
+        function Sakura(){
+        var opcao = prompt("Escolha um número para começar:\n\n1 - Do um ao dez.\n2 - Números Ímpares.\n3- Tabuada de 8.\n4 - Tabuada do 1 ao 10. ")
+
+        switch (opcao) {
+        case '1': umaodez()
+            break;
+        case '2': impares()
+            break;
+        case '3': tabuada8()
+            break;
+        case '4': tabuada110()
+            break;
+    
+        default:
+            break;
+ }
+
+    function umaodez(){
+        for (var n = 1; n <= 10; n++){
+            resultado += n + " ";
+        }
+        exibirResultado(resultado);
+    }
+    function impares(){
+        for (var n = 1; n < 100; n += 2){
+            resultado += n + " ";
+        }
+        exibirResultado(resultado);
+    }
+    function tabuada8(){
+        for (var n = 1; n <= 10; n++){
+            resultado += "8x" + i + "=" + ( 8 * i) + "\n";
+        }
+        exibirResultado(resultado);
+    }
+    function tabuada110(){
+        var resultado = "";
+        for (var n = 1;n<=10;n++){
+            resultado += "Tabuada do "+ i + ":\n";
+            for (var m = 1;m<=10;m++){
+                resultado += i + " x " + j + " = " + (i * j) + "\n"
+            }
+            resultado += "\n"
+        }
+        exibirResultado(resultado);
+    }
+    function exibirResultado(resultado){
+        var elemento = document.getElementById("resultado");
+        elemento.innerText = resultado;
+    }
+}
+    </script>
+</body>
+</html>

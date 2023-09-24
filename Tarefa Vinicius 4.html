@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefa</title>
+</head>
+<body>
+    <script>
+        window.onload = salario1()
+        function salario1(){
+            let S = window.prompt("Informe seu salário.")
+            let alt = window.prompt('Digite o plano:\n 1 = 10% \n 2 = 15% \n 3 = 20%')
+            switch(alt){
+                case '1':
+                    window.alert("Seu salário é " + ((S * 1.10).toFixed(2)))
+                    break
+                case '2':
+                    window.alert("Seu salário é " + ((S * 1.15).toFixed(2)))
+                    break
+                case '3':
+                    window.alert("Seu salário é " + ((S * 1.20).toFixed(2)))
+                    break
+                default:
+                    window.alert("Escolha uma alternativa certa.")
+                    break;
+            }
+        }
+
+    </script>
+</body>
+</html>
